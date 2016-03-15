@@ -27,9 +27,9 @@ Consul是一个复杂的系统，拥有多个不同的演进中的部分。为�
 
 	虽然数据中心的定义看上去很明显，依然还是有些细节必须考虑。例如，在EC2中，多个可到达的zone是否考虑组成一个单一的数据中心？我们定义数据中心为这样的网络环境：**私有，低延迟，高带宽**。这排除了跨越公共英特网的通讯，但是，在我们看来，在单个EC2 区域中的多个可到达zone可以考虑为单个数据中心的一部分。
 
-- Consensus / 一致
+- Consensus / 一致性
 
-	在我们的文档中，使用 consensus 来表示不仅有对被选举的leader的认可，而且有对事务顺序的认可。由于这些事务被应用到 [有限状态机](https://en.wikipedia.org/wiki/Finite-state_machine)，我们的consensus定义暗示被复制状态机的一致性。在 [Wikipedia](https://en.wikipedia.org/wiki/Consensus) 上有Consensus的更多详细内容，而我们的实现在 [这里](https://www.consul.io/docs/internals/consensus.html) 描述。
+	在我们的文档中，使用 consensus /一致性 来表示不仅有对被选举的leader的认可，而且有对事务顺序的认可。由于这些事务被应用到 [有限状态机](https://en.wikipedia.org/wiki/Finite-state_machine)，我们的consensus定义暗示被复制状态机的一致性。在 [Wikipedia](https://en.wikipedia.org/wiki/Consensus) 上有Consensus的更多详细内容，而我们的实现在 [这里](https://www.consul.io/docs/internals/consensus.html) 描述。
 
 - Gossip
 
@@ -55,7 +55,7 @@ Consul是一个复杂的系统，拥有多个不同的演进中的部分。为�
 
 让我们分解这个图片并描述每一块。首先，我们可以看到有两个数据中心，标签为"Datacenter 1"和"Datacenter 2"。consul对多数据中心提供最高等级的支持并预期这将成为普遍情况。
 
-在每个数据中心内，混合有客户端和服务器。预期由3到5个服务器。强调在失败情况下的可达到和性能之间的平衡，因为添加更多机器会导致一致(consensus)变得日益缓慢。不过，对于客户端的数量没有限制，而且可以很容易的扩展到成千上万。
+在每个数据中心内，混合有客户端和服务器。预期由3到5个服务器。强调在失败情况下的可达到和性能之间的平衡，因为添加更多机器会导致一致性变得日益缓慢。不过，对于客户端的数量没有限制，而且可以很容易的扩展到成千上万。
 
 在一个数据中心内的所有节点加入一个gossip 协议。这意味着对于一个给定的数据中心，有一个包含所有节点的gossip池。这服务于几个目的：
 
@@ -71,6 +71,6 @@ Consul是一个复杂的系统，拥有多个不同的演进中的部分。为�
 
 # 深入
 
-此刻我们已经覆盖了consul的高层架构，但是对于每个子系统还有很多的细节。[一致协议(consensus protocol)](https://www.consul.io/docs/internals/consensus.html) 被作为 [gossip协议](https://www.consul.io/docs/internals/gossip.html) 给做了详细的文档。安全模式的 [文档](https://www.consul.io/docs/internals/security.html) 和使用的协议也同样可以得到。
+此刻我们已经覆盖了consul的高层架构，但是对于每个子系统还有很多的细节。[一致性协议(consensus protocol)](https://www.consul.io/docs/internals/consensus.html) 被作为 [gossip协议](https://www.consul.io/docs/internals/gossip.html) 给做了详细的文档。安全模式的 [文档](https://www.consul.io/docs/internals/security.html) 和使用的协议也同样可以得到。
 
 对于其他细节，可以查阅代码，在IRC提问，或者求助于邮件列表。

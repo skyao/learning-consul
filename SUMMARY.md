@@ -6,7 +6,7 @@ bui# Summary
 * [官方文档(翻译)](docs/index.md)
 	* [Consul内部](docs/internals/index.md)
 		* [架构](docs/internals/architecture.md)
-		* [一致协议](docs/internals/consensus_protocol.md)
+		* [一致性协议](docs/internals/consensus_protocol.md)
 	* [Agent](docs/agent/index.md)
 		* [HTTP API](docs/agent/httpapi/index.md)
 
