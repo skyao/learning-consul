@@ -7,8 +7,11 @@ bui# Summary
 	* [Consul内部](docs/internals/index.md)
 		* [架构](docs/internals/architecture.md)
 		* [一致性协议](docs/internals/consensus_protocol.md)
+		* [反熵](docs/internals/anti-entropy.md)
 	* [Agent](docs/agent/index.md)
 		* [HTTP API](docs/agent/httpapi/index.md)
+			* [Agent](docs/agent/httpapi/agent.md)
+			* [Catalog](docs/agent/httpapi/catalog.md)
 
 
 
