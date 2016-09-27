@@ -1,36 +1,27 @@
 {
-    "author": "Sky Ao <aoxiaojian@gmail.com>",
-    "description": "Records in leaning Consul.",
-    "extension": null,
-    "generator": "site",
-    "isbn": null,
-    "links": {
-        "sharing": {
-            "all": null,
-            "facebook": null,
-            "google": null,
-            "twitter": null,
-            "weibo": null
-        },
-        "sidebar": {
-            "Sky's Blog": "http://skyao.github.io/"
-        }
+  "author": "Sky Ao <aoxiaojian@gmail.cn>",
+  "description": "consul学习笔记, 记录consul的学习过程和日常使用",
+  "extension": null,
+  "generator": "site",
+  "sidebar": {
+    "Sky@gitbook": "https://skyao.gitbooks.io"
+  },
+  "output": null,
+  "pdf": {
+    "fontSize": 12,
+    "footerTemplate": null,
+    "headerTemplate": null,
+    "margin": {
+      "bottom": 36,
+      "left": 62,
+      "right": 62,
+      "top": 36
     },
-    "output": null,
-    "pdf": {
-        "fontSize": 12,
-        "footerTemplate": null,
-        "headerTemplate": null,
-        "margin": {
-            "bottom": 36,
-            "left": 62,
-            "right": 62,
-            "top": 36
-        },
-        "pageNumbers": false,
-        "paperSize": "a4"
-    },
-    "plugins": [],
-    "title": "Leaning Consul/Consul学习笔记",
-    "variables": {}
+    "pageNumbers": false,
+    "paperSize": "a4"
+  },
+  "plugins": [],
+  "title": "consul学习笔记",
+  "variables": {
+  }
 }
