@@ -1,4 +1,4 @@
-bui# Summary
+# Summary
 
 * [Consul介绍](introduction/index.md)
 	* [和其他软件的比较](introduction/consul_vs_other_software.md)
@@ -12,6 +12,8 @@ bui# Summary
 		* [HTTP API](docs/agent/httpapi/index.md)
 			* [Agent](docs/agent/httpapi/agent.md)
 			* [Catalog](docs/agent/httpapi/catalog.md)
+* [全文标签总览](tags.md)
+
 
 
 

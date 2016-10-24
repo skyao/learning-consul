@@ -6,7 +6,4 @@ Consul 支持健康检查,并允许 HTTP 和 DNS 协议调用 API 存储键值�
 
 这份笔记用于记录Consul学习使用过程的各种信息和心得。
 
-笔记发布于 gitbook，请点击下面的链接阅读:
-
-https://skyao.gitbooks.io/leaning-consul/
 
