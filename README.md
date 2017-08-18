@@ -8,5 +8,5 @@ Consul 支持健康检查,并允许 HTTP 和 DNS 协议调用 API 存储键值�
 
 笔记发布于 gitbook，请点击下面的链接阅读:
 
-https://skyao.gitbooks.io/leaning-consul/
+https://skyao.gitbooks.io/learning-consul/
 

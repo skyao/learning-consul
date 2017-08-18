@@ -2,7 +2,7 @@
   "gitbook": ">=3.2.0",
   "description": "Consul学习笔记",
   "language": "zh-hans",
-  "author": "Sky Ao <aoxiaojian@gmail.cn>",
+  "author": "Sky Ao <aoxiaojian@gmail.com>",
   "extension": null,
   "generator": "site",
   "links" : {
@@ -22,7 +22,7 @@
   ],
   "pluginsConfig": {
     "edit-link": {
-        "base": "https://github.com/skyao/leaning-consul/edit/master",
+        "base": "https://github.com/skyao/learning-consul/edit/master",
         "label": "Edit"
     }
   },
