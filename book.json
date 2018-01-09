@@ -16,9 +16,7 @@
   "plugins": [
     "toggle-chapters",
     "edit-link", 
-    "etoc",
-    "back-to-top-button",
-    "tags"
+    "back-to-top-button"
   ],
   "pluginsConfig": {
     "edit-link": {
