@@ -1,7 +1,9 @@
-Consul
-===========
-
-# 介绍
+---
+date: 2018-11-10T10:30:00+08:00
+title: 介绍
+weight: 100
+description : "介绍Consul"
+---
 
 Consul是HashiCorp公司推出的开源工具，在 [Consul的官网](https://www.consul.io/), consul是如此介绍自己的：
 
@@ -46,7 +48,7 @@ Consul是HashiCorp公司推出的开源工具，在 [Consul的官网](https://ww
 
 consul被设计为对DevOps社区和应用开发者友好，使得它可以完美的用于现代而灵活的基础设施.
 
-# Consul的主要架构
+## Consul的主要架构
 
 Consul是分布式的高可用系统。
 

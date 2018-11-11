@@ -1,6 +1,5 @@
 .*
 !.gitignore
-_book
-node_modules
-npm-debug.log
-
+public/
+themes/
+update_theme.sh

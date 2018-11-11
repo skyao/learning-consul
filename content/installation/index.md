@@ -1,4 +1,10 @@
-# Consul
+---
+date: 2018-11-10T10:30:00+08:00
+title: 安装
+weight: 200
+description : "介绍Consul的安装"
+---
+
 
 ## 下载安装
 

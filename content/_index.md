@@ -1,6 +1,11 @@
-# Consul学习笔记
+---
+date: 2018-11-10T11:00:00+08:00
+title: 前言
+weight: 1
+description : "介绍Consul学习笔记的基本资料和访问方式"
+---
 
-![](content/introduction/images/consul-logo.png)
+![](introduction/images/consul-logo.png)
 
 ### 内容介绍
 
@@ -18,4 +23,5 @@ Consul 支持健康检查,并允许 HTTP 和 DNS 协议调用 API 存储键值�
 ### 版权申明
 
 本笔记内容可以任意转载，但请注明来源并提供链接，**请勿用于商业出版**。
+
 

@@ -1,5 +1,12 @@
-Consul vs 其他软件
-=================
+---
+date: 2018-11-10T10:35:00+08:00
+title: Consul vs 其他软件
+weight: 102
+menu:
+  main:
+    parent: "introduction"
+description : "Consul vs 其他软件"
+---
 
 > 注：内容转载/翻译自 consul 官网资料 [CONSUL VS. OTHER SOFTWARE](https://www.consul.io/intro/vs/index.html)
 
@@ -7,7 +14,7 @@ Consul解决的问题有多种，而每个单独的特性已经被很多不同�
 
 在这章中，我们对比consul和其他选择。在大多数情况下，consul和任何其他系统并不相互排斥。
 
-# ZooKeeper, doozerd 和 etcd
+## ZooKeeper, doozerd 和 etcd
 
 > 注：本来想自己翻译的，后来发现有 [现成的翻译版本](http://dockone.io/article/300),就简单引用过来
 
@@ -29,7 +36,7 @@ Consul为服务发现、健康检测、K/V存储和多数据中心提供了一�
 
 > 注：貌似没有对比etcd？Etcd也算是目前呼声比较高的服务注册和配置存储方案。
 
-# CHEF, PUPPET等
+## CHEF, PUPPET等
 
 发现有人使用Chef, Puppet和其他配置管理工具来构建服务发现机制也不是罕见的。通常是在周期性convergence run(不知该怎么翻译？)时通过查询全局状态来在每个节点上构建配置文件来实现。
 
@@ -39,7 +46,7 @@ consul被专门设计用于服务发现工具。为此，对集群的状态它�
 
 即便如此，Consul不是配置管理工具的替代品。这些工具对于构建应用，包括consul自身依然非常重要。静态供应最好由现有的工具管理，而动态状态和发现最好由consul管理。配置管理和集群管理的分离同样有很多有利的边际影响：在没有全局状态的情况下Chef recipes 和 Puppet manifests变的更简单， periodic run不再要求服务或者配置变更， 而基础设施可以转为不可变因为配置管理运行不要全局状态。
 
-# Nagios 和 Sensu
+## Nagios 和 Sensu
 
 Nagios 和 Sensu 都是为监控而构建的工具。他们用于在问题发生时通知运维。
 
@@ -53,10 +60,10 @@ consul提供和Nagios和Sensu一样的健康检查能力，对现代DevOps友好
 
 精明的读者可能发现如果consul agent停机，那么边际触发的更新就不会发生。从其他节点的视角看，所有的检查将在一个稳定的状态下进行。然后，consul对此多了预防。在客户端和服务器之间使用的gossip协议结合了分布式失败探测器。这意味着如果consul agent失败了，这个失败会被探测到，因此这个节点运行的所有检查被认定为失败。这个失败探测器在整个集群之间分发工作，同时，也是最重要的，使得边际触发架构得以工作。
 
-# SKYDNS
+### SKYDNS
 
-# SMARTSTACK
+### SMARTSTACK
 
-# SERF
+### SERF
 
 To be continue......
