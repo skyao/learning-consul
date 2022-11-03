@@ -1,6 +1,6 @@
 # Consul学习笔记
 
-![](content/introduction/images/consul-logo.png)
+![](content/docs/introduction/images/consul-logo.png)
 
 ### 内容介绍
 

@@ -1,11 +1,10 @@
 ---
-date: 2018-11-10T10:35:00+08:00
-title: 资料
-weight: 109
-menu:
-  main:
-    parent: "introduction"
-description : "收集Consul的各种资料"
+title: "资料"
+linkTitle: "资料"
+weight: 500
+date: 2022-11-2
+description: >
+  收集Consul的各种资料
 ---
 
 ## 官方资料

@@ -1,8 +1,10 @@
 ---
-date: 2018-11-10T10:30:00+08:00
-title: 介绍
-weight: 100
-description : "介绍Consul"
+title: "概况"
+linkTitle: "概况"
+weight: 200
+date: 2021-01-29
+description: >
+  介绍Consul概况
 ---
 
 Consul是HashiCorp公司推出的开源工具，在 [Consul的官网](https://www.consul.io/), consul是如此介绍自己的：
@@ -59,5 +61,4 @@ agent和一个或者多个consul服务器对话。数据存储并同步在consul
 需要发现其他服务或者节点的基础设施的组件可以查询任何consul 服务器或者consul agent。agent自动将请求转发给服务器。
 
 每个数据中心运行consul服务器的一个集群。当跨数据中心的服务发现或者配置请求发生时，本地consul服务器转发请求到远程数据中心并返回结果。
-
 

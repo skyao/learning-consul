@@ -1,12 +1,15 @@
 ---
-date: 2018-11-10T10:35:00+08:00
-title: Consul vs 其他软件
-weight: 102
-menu:
-  main:
-    parent: "introduction"
-description : "Consul vs 其他软件"
+title: "Consul vs 其他软件"
+linkTitle: "对比其他软件"
+weight: 500
+date: 2022-11-2
+description: >
+  Consul和其他软件的比较
 ---
+
+
+
+
 
 > 注：内容转载/翻译自 consul 官网资料 [CONSUL VS. OTHER SOFTWARE](https://www.consul.io/intro/vs/index.html)
 

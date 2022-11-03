@@ -1,9 +1,13 @@
 ---
-date: 2018-11-10T10:30:00+08:00
-title: 安装
-weight: 200
-description : "介绍Consul的安装"
+title: "安装概述"
+linkTitle: "概述"
+weight: 1
+date: 2021-01-29
+description: >
+  概述介绍Consul的安装
 ---
+
+
 
 
 ## 下载安装
@@ -26,5 +30,4 @@ cd consul
 - `-data-dir` 参数指定数据存储目录
 - `-bind` 参数指定绑定的地址，有多个网络接口时需要指定
 - `-ui` 参数指定开启UI界面，这样可以通过 `http://localhost:8500/ui` 这样的地址访问 consul 自带的web UI 界面。
-
 
