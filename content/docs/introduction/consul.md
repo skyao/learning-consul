@@ -7,58 +7,57 @@ description: >
   介绍Consul概况
 ---
 
-Consul是HashiCorp公司推出的开源工具，在 [Consul的官网](https://www.consul.io/), consul是如此介绍自己的：
+## 介绍
 
-> Service discovery and configuration made easy / 简化服务发现和配置
-> Distributed, highly available, and datacenter-aware / 分布式，高可用，多数据中心
+### consul 介绍
 
-## 主要特性
+来自consul网站首页的介绍 https://www.consul.io/ ：
 
-> 以下内容翻译自官网 [首页](https://www.consul.io/) 和介绍资料 [consul介绍/INTRODUCTION TO CONSUL](https://www.consul.io/intro/index.html)。
+> 基于身份的网络
+> 
+> Consul使用服务身份和传统的网络实践，帮助企业安全地连接在任何环境中运行的应用程序。
 
-- 服务发现
+### 定位
 
-	![](https://www.consul.io/assets/images/feature-discovery@2x-e2a08445.png)
+> 服务网络的支柱
+>
+> 一个现代的服务网络解决方案要求我们回答四个具体问题。我的服务在哪里运行？我如何保障它们之间的通信？我如何使常规的网络任务自动化？我如何控制对我的环境的访问？
 
-    Consul简化简化了服务注册和发现，可以使用DNS或者HTTP接口。也可以注册外部服务比如SaaS提供商。
+- 发现服务：创建一个中央注册中心，实时跟踪服务、更新和健康状态。
 
-	Consul的客户端可以提供服务，例如API或者mysq，而其他客户端可以使用consul来发现给定服务的提供者。通过使用DNS或者HTTP，应用可以轻易的找到他们依赖的服务。
+- 安全联网：确保所有服务与服务之间的通信都是经过认证、授权和加密的。
 
-- 失败检测
+- 自动化网络：通过自动执行关键的网络任务来减少运维的负担
 
-	![](https://www.consul.io/assets/images/feature-health@2x-50ca2d94.png)
+- 访问服务：在入口处控制对服务的访问并集中管理流量
 
-	和服务发现配套的健康检查阻止将请求路由到不健康的主机并使得服务易于提供熔断器。
+## 版本
 
-	Consul客户端可以提供任意数量的监控检查，可以和给定服务关联(webserver是否返回200OK)，或者和本地节点关联(内存使用率是否低于90%)。这个信息可以被操作者使用来监控集群健康，也用于服务发现组件路由请求远离不健康站点。
+### 开源版本
 
-- 多数据中心
+开源版本是自管理的，总是免费的
 
-	![](https://www.consul.io/assets/images/feature-multi@2x-9fea2a34.png)
+下载开源的Consul二进制文件，并在本地或你的环境中运行。
 
-	Consul 很容易扩展到多个数据中心，不需要复杂的配置。可以在其他数据中心查找服务，或者保持请求本地。
+### 云托管版本
 
-	支持多数据中心意味着consul的用户不必担心构建额外的抽象层来扩展到多个地域。
+通过HCP（HashiCorp Cloud Platform / HashiCorp云平台）上的完全托管的Consul集群，在几分钟内就能启动和运行。
 
-- 键值对存储
+## 常见的使用案例
 
-	![](https://www.consul.io/assets/images/feature-config@2x-d09628e4.png)
+- 用DNS或HTTP发现服务：使用DNS或HTTP API来发现已注册的服务和它们在Consul的位置
 
-	灵活的键值对存储，用于动态配置，特性标记，协调，leader选举等. 支持Long poll用于配置变更的准实时通知。
+- 控制对服务的访问：通过API网关控制对在Consul服务网中运行的服务的访问
 
-	应用可以将consul的分层键值对存储用于任何目的。简单的HTTP API易于使用。
+- 动态负载平衡：将人工网络任务自动化，并减少票据队列作为奖励。
 
-consul被设计为对DevOps社区和应用开发者友好，使得它可以完美的用于现代而灵活的基础设施.
+- 自动化的网络任务：更快地配置应用程序。自动执行复杂的网络任务。分离关注点，使运营商能够轻松管理和优化网络。
 
-## Consul的主要架构
+- mTLS加密：用mTLS进行认证，并对服务之间的连接进行加密。
 
-Consul是分布式的高可用系统。
+- 多平台服务网格：Consul服务网格可以在任何环境下部署，并支持多种运行机制，包括Kubernetes、Nomad和VM。
 
-每个提供服务给consul的节点都运行有一个consul的agent。运行agent对于发现其他服务或者获取/设置键值对数据并非必须。agent负责做节点上的服务的健康检查也包括节点自己。
+- 可观察性：通过Consul的内置UI或包含的APM集成，可视化服务网格。
 
-agent和一个或者多个consul服务器对话。数据存储并同步在consul服务器上。服务器自行选择leader。虽然consul可以单机工作，推荐3到5台consul以避免失败场景导致数据丢失。推荐每个数据中心一个consul服务器集群。
-
-需要发现其他服务或者节点的基础设施的组件可以查询任何consul 服务器或者consul agent。agent自动将请求转发给服务器。
-
-每个数据中心运行consul服务器的一个集群。当跨数据中心的服务发现或者配置请求发生时，本地consul服务器转发请求到远程数据中心并返回结果。
+- L7流量管理：实施细粒度的流量策略，以便在不同的服务中路由和拆分流量。
 
