@@ -212,7 +212,7 @@ consul agent -node=consul -config-dir=${CONSUL_CONFIG_DIR} -data-dir=${CONSUL_DA
      Internal RPC TLS: Verify Incoming: true, Verify Outgoing: true (Verify Hostname: true), Min Version: TLSv1_2
 ```
 
-> 备注：提交了一个 issue https://github.com/consul/consul/issues/5026 
+> 备注：提交了一个 issue https://github.com/hashicorp/consul/issues/15331
 
 为方便使用，添加 alias
 
